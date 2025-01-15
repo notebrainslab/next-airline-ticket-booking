@@ -46,8 +46,6 @@ export default function FlightResults() {
   const [cabinExpanded, setCabinExpanded] = useState(true)
   const [priceExpanded, setPriceExpanded] = useState(true)
   const [airlinesExpanded, setAirlinesExpanded] = useState(true)
-  const [stopExpanded, setStopExpanded] = useState(true)
-  const [departure, setDeparture] = useState(true)
 
   const FilterContent = () => (
     <div className="space-y-6">

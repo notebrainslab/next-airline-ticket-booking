@@ -43,7 +43,7 @@ export default function AchievementCard() {
           </div>
 
           <div className="space-y-4">
-            <p className="font-medium">Let's Connect Reach Out for More Information</p>
+            <p className="font-medium">Let&apos;s Connect Reach Out for More Information</p>
             <Button className="bg-blue-600 hover:bg-blue-700">
               Contact us
             </Button>

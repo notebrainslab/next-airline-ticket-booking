@@ -88,7 +88,7 @@ export default function BookingForm() {
           <div className="mt-8 space-y-4 bg-white p-6 rounded-lg">
               <h3 className="text-lg font-semibold">Save your details!</h3>
               <p className="text-sm text-gray-500">
-                Use your contact details to create an account and speed up future bookings.(We won't save your payment information.)
+                Use your contact details to create an account and speed up future bookings.(We won&apos;t save your payment information.)
               </p>
               <div className="flex items-center gap-2 justify-start">
                 <span><input type="checkbox"/></span>
