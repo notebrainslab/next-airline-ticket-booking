@@ -44,7 +44,23 @@ const blogPosts: BlogPost[] = [
     author: "Malisa John",
     date: "08 Aug, 2023",
     image: "/image-4.png"
-  }
+  },
+  {
+    id: 5,
+    title: "Wings of Adventure: Exploring the World by Air",
+    excerpt: "Lorem ipsum dolor sit amet consectetur. Feugiat sit eleifend tortor.",
+    author: "Malisa John",
+    date: "08 Aug, 2023",
+    image: "/image-1.png"
+  },
+  {
+    id: 6,
+    title: "Wings of Adventure: Exploring the World by Air",
+    excerpt: "Lorem ipsum dolor sit amet consectetur. Feugiat sit eleifend tortor.",
+    author: "Malisa John",
+    date: "08 Aug, 2023",
+    image: "/image-2.png"
+  },
 ]
 
 export default function LatestNews() {
@@ -57,7 +73,7 @@ export default function LatestNews() {
         </Button>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-3 gap-5">
         {blogPosts.map((post) => (
           <Card key={post.id} className="border-0 shadow-sm overflow-hidden">
             <CardContent className="p-0">
@@ -69,7 +85,7 @@ export default function LatestNews() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 space-y-4">
                 <div className="flex items-center gap-6 text-sm text-gray-500 mb-4">
                   <div className="flex items-center gap-2">
                     <User className="w-4 h-4" />
