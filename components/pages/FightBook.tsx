@@ -11,7 +11,7 @@ export default function FlightBookingCard() {
     <div className=" max-w-6xl mx-auto p-6 bg-gray-200 rounded-xl shadow-sm">
       {/* Main Service Tabs */}
       <Tabs defaultValue="flights" className="mb-6">
-        <TabsList className="grid w-full grid-cols-3 max-w-md">
+        <TabsList className="grid w-full grid-cols-1 lg:grid-cols-3 ">
           <TabsTrigger value="flights" className="flex items-center gap-2">
             <Plane className="h-4 w-4" />
             Flights
@@ -28,17 +28,19 @@ export default function FlightBookingCard() {
       </Tabs>
 
       {/* Secondary Tabs */}
-      <div className="grid grid-cols-3 gap-2 mb-6">
-        <Button variant="secondary" className="bg-orange-400 text-white hover:bg-orange-500">
+      <Tabs defaultValue="flights">
+      <TabsList className="grid grid-cols-1 lg:grid-cols-3 gap-2 mb-6">
+        <TabsTrigger value="flights" className="bg-orange-400 text-white hover:bg-orange-500">
           Stopover
-        </Button>
+        </TabsTrigger>
         <Button variant="ghost" className="bg-gray-100">
           Manage Booking / Check in
         </Button>
         <Button variant="ghost" className="bg-gray-100">
           Flight Status
         </Button>
-      </div>
+      </TabsList>
+      </Tabs>
 
       {/* Trip Type Selection */}
       <RadioGroup defaultValue="one-way" className="flex gap-6 mb-6">
@@ -64,14 +66,14 @@ export default function FlightBookingCard() {
 
       {/* Flight Search Form */}
       <div className="bg-blue-50 p-4 rounded-lg mb-6">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {/* From/To Fields */}
           <div className="space-y-1">
             <label className="text-sm text-gray-500">From</label>
             <Input placeholder="From" className="bg-white" />
           </div>
-          <div className="flex items-end">
-            <Button variant="ghost" size="icon" className="mb-[2px]">
+          <div className="flex items-center justify-center">
+            <Button variant="ghost" size="icon" className="mt-6">
               <ArrowLeftRight className="h-4 w-4" />
             </Button>
           </div>
@@ -115,7 +117,7 @@ export default function FlightBookingCard() {
           </div>
         </RadioGroup>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-start md:flex-row md:items-center gap-4">
           <p className="text-sm text-gray-600">How many days would you like to stay in Dubai?</p>
           <div className="flex items-center">
             <Button variant="outline" size="sm" className="h-8 w-8 rounded-l">-</Button>
@@ -126,7 +128,7 @@ export default function FlightBookingCard() {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex justify-end items-center gap-4">
+      <div className="flex justify-center md:justify-end items-center gap-4">
         <Input placeholder="Enter Promo Code" className="max-w-[200px]" />
         <Button className="bg-blue-600 hover:bg-blue-700">
           <Plane className="mr-2 h-4 w-4" /> Show Flight

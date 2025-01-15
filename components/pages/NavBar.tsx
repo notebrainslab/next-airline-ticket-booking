@@ -44,8 +44,8 @@ function NavBar() {
         </div>
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <ul className="grid grid-cols-3 gap-3 text-center mt-4">
+          <div className="md:hidden ">
+            <ul className="grid grid-cols-3 gap-3 text-center mt-4 bg-slate-500 rounded-lg p-2">
               <li className="p-4 font-semibold hover:text-blue-500 text-xl">Fight</li>
               <li className="p-4 font-semibold hover:text-blue-500 text-xl">Car</li>
               <li className="p-4 font-semibold hover:text-blue-500 text-xl">Hotel</li>

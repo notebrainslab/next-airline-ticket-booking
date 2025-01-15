@@ -4,7 +4,7 @@ import Image from "next/image"
 function Hero() {
   return (
     <div
-        className="max-w-7xl mx-auto pt-16 lg:pt-32 px-8 lg:px-12 lg:flex items-center justify-center">
+        className="max-w-7xl mx-auto pt-16 md:pt-32 px-8 md:px-12 md:flex items-center justify-center">
         <div className="space-y-8 flex flex-col">
           <h1 className="text-5xl font-bold mb-4 text-center md:text-left">
             <span className="text-blue-600">Book</span> Your
