@@ -1,5 +1,6 @@
 import AchievementCard from "@/components/pages/Achivement";
 import FlightBookingCard from "@/components/pages/FightBook";
+import FlightDeals from "@/components/pages/FlightDeals";
 import Hero from "@/components/pages/Hero";
 import InfoCards from "@/components/pages/InfoCard";
 import LatestNews from "@/components/pages/Latest-news";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/>
       <FlightBookingCard/>
       <InfoCards/>
+      <FlightDeals/>
       <PopularDestinations/>
       <AchievementCard/>
       <Testimonials/>

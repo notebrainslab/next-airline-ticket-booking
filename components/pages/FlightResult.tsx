@@ -27,7 +27,7 @@ const flights: Flight[] = [
   {
     id: 1,
     airline: "Feel Dubai Airline",
-    logo: "/placeholder.svg?height=40&width=40",
+    logo: "/icon-1.png",
     aircraft: "Boeing 777-90",
     departure: "12:00",
     departureCode: "DUB",

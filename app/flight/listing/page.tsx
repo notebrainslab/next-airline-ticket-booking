@@ -8,7 +8,8 @@ function page() {
   return (
     <div>
        <FlightListingHeader/>
-       <FlightSearch/>
+       <FlightSearch
+       />
        <FlightResults/>
     </div>
   )

@@ -65,7 +65,7 @@ export default function PopularDestinations() {
           {destinations.map((destination) => (
             <Card key={destination.id} className="border-0 shadow-sm ">
               <CardContent className="p-3">
-                <div className="relative aspect-video overflow-hidden p-3 hover:scale-105 duration-300 ease">
+                <div className="relative aspect-video overflow-hidden p-3 hover:scale-105 duration-300 ease hover:p-3">
                   <Image
                     src={destination.image}
                     alt={destination.city}
@@ -75,7 +75,7 @@ export default function PopularDestinations() {
                   <p className="absolute bg-white px-3 p-2 rounded-lg opacity-0 hover:text-opacity-30 ">from <span className="text-amber-400">$350</span></p>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold">{destination.city}</h3>
+                  <h3 className="text-xl font-medium lg:font-semibold">{destination.city}</h3>
                   <div className="flex items-center gap-6 text-sm text-gray-600">
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
