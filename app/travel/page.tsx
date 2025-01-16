@@ -1,13 +1,13 @@
 import PaginationDemo from "@/components/pages/PaginationDemo"
 import TravelBooking from "@/components/pages/TravelBooking"
-import TravelCards from "@/components/pages/TravelCrad"
 import TravelHeader from "@/components/pages/TravelHeader"
+import Cards from "@/components/pages/Crad"
 
 function page() {
   return (
     <div>
     <TravelHeader/>
-    <TravelCards/>
+    <Cards/>
       <TravelBooking/>
       <PaginationDemo/>
     </div>

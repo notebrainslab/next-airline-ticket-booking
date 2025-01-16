@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CircleCheck, Clock10, DollarSign, HelpCircle, Plane, Wallet } from 'lucide-react'
+import { CircleCheck, Clock10, DollarSign } from 'lucide-react'
 
-export default function TravelCards() {
+export default function Cards() {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
       <Card className="border-0 shadow-sm">
         <CardContent className="flex items-center justify-center gap-4 p-6">
           <div className="rounded-full p-2 bg-blue-50">

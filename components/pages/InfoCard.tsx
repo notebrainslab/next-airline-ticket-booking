@@ -3,7 +3,7 @@ import { HelpCircle, Plane, Wallet } from 'lucide-react'
 
 export default function InfoCards() {
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
       <Card className="border-0 shadow-sm">
         <CardContent className="flex items-start gap-4 p-6">
           <div className="rounded-full p-2 bg-blue-50">
