@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import { format } from "date-fns"
+import Image from 'next/image'
 
 interface TravelPackage {
   id: number
@@ -303,7 +304,7 @@ export default function TravelBooking() {
                   <div className="absolute top-2 left-2 bg-white px-3 py-1 rounded-full">
                     {pkg.duration}
                   </div>
-                  <img
+                  <Image
                     src={pkg.image || "/placeholder.svg"}
                     alt={pkg.title}
                     className="h-[200px] object-cover rounded-lg"

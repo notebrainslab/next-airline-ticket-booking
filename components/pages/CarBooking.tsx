@@ -8,7 +8,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Utensils,ShipWheelIcon as Wheelchair } from 'lucide-react'
 import { Button } from "../ui/button"
 
 export default function CarBooking() {

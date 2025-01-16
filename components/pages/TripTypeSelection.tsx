@@ -11,6 +11,7 @@ import { ArrowLeftRight, CalendarIcon, Plane } from 'lucide-react'
 function TripTypeSelection() {
     const [date,setDate]=useState<Date>()
     const [dateTwo,setDateTwo]=useState<Date>()
+    const [count,setCount]=useState(0)
   return (
     <div>
       {/* Trip Type Selection */}
@@ -141,9 +142,13 @@ function TripTypeSelection() {
         <div className="flex flex-col items-start md:flex-row md:items-center gap-4">
           <p className="text-lg text-gray-600">How many days would you like to stay in Dubai?</p>
           <div className="flex items-center">
-            <Button variant="outline" size="lg" className="h-10 w-10 rounded-l">-</Button>
-            <div className="h-8 w-12 flex items-center justify-center border-y">0</div>
-            <Button variant="outline" size="lg" className="h-10 w-10 rounded-r">+</Button>
+            <Button 
+            onClick={()=>{if(count >= 1){setCount(count-1)}}}
+            variant="outline" size="lg" className="h-10 w-10 rounded-l">-</Button>
+            <div className="h-8 w-12 flex items-center justify-center border-y">{count}</div>
+            <Button 
+            onClick={()=>setCount(count+1)}
+            variant="outline" size="lg" className="h-10 w-10 rounded-r">+</Button>
           </div>
         </div>
       </div>

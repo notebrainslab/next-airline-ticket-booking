@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import Image from "next/image"
 
 interface FlightDeal {
   from: string
@@ -85,9 +86,10 @@ export default function FlightDeals() {
               <Card className="overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={deal.image || "/placeholder.svg"}
                       alt={`${deal.from} to ${deal.to}`}
+                      fill
                       className="w-full h-full object-cover"
                     />
                   </div>

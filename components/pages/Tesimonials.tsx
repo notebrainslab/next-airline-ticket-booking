@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 interface Testimonial {
   id: number
@@ -70,7 +71,7 @@ export default function Testimonials() {
                       zIndex: testimonials.length - index,
                     }}
                   >
-                    <img
+                    <Image
                       src={testimonial.avatar || "/placeholder.svg"}
                       alt=""
                       className="w-12 h-12 rounded-full border-2 border-background"

@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CircleCheck, Clock10, DollarSign } from "lucide-react";
 
 type CardData = {
   icon: React.ElementType;
@@ -11,23 +10,6 @@ interface CardsProps {
   cards: CardData[];
 }
 
-const cardData = [
-  {
-    icon: CircleCheck,
-    title: "Free Cancelation",
-    description: "Cancel anytime without extra charges."
-  },
-  {
-    icon: DollarSign,
-    title: "No Hidden Charges",
-    description: "Pay only for what you see—no surprises."
-  },
-  {
-    icon: Clock10,
-    title: "24/7 Customer Service",
-    description: "Our team is always here to assist you."
-  }
-];
 export default function Cards({ cards }: CardsProps) {
   return (
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
