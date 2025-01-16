@@ -10,6 +10,7 @@ import { ArrowLeftRight, CalendarIcon, Plane } from 'lucide-react'
 
 function TripTypeSelection() {
     const [date,setDate]=useState<Date>()
+    const [dateTwo,setDateTwo]=useState<Date>()
   return (
     <div>
       {/* Trip Type Selection */}
@@ -97,18 +98,18 @@ function TripTypeSelection() {
                       variant={"outline"}
                       className={cn(
                         "w-full justify-start text-left font-normal",
-                        !date && "text-muted-foreground"
+                        !dateTwo && "text-muted-foreground"
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {date ? format(date, "PPP") : <span>Check-out</span>}
+                      {dateTwo ? format(dateTwo, "PPP") : <span>Check-out</span>}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0">
                     <Calendar
                       mode="single"
-                      selected={date}
-                      onSelect={setDate}
+                      selected={dateTwo}
+                      onSelect={setDateTwo}
                       initialFocus
                     />
                   </PopoverContent>
