@@ -7,6 +7,7 @@ import { ChevronDown, ChevronUp, Plane, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Image from "next/image"
 import { useState } from "react"
+import FlightDetailsToggle from "./FlightDetailsToggle"
 
 interface Flight {
   id: number
@@ -21,6 +22,9 @@ interface Flight {
   stops: number
   date: string
   price: number
+  flightClass: string; // Add the missing property here
+  flightNumber: string;
+  luggageInfo: string; // Explicitly defined
 }
 
 const flights: Flight[] = [
@@ -36,7 +40,95 @@ const flights: Flight[] = [
     duration: "0h 50m",
     stops: 1,
     date: "Monday 14 August",
-    price: 240
+    price: 240,
+    flightClass: "Economy",
+    flightNumber: "FK234",
+    luggageInfo: "Adult(s): 25KG luggage free" // Now recognized
+  },
+  {
+    id: 2,
+    airline: "Feel Dubai Airline",
+    logo: "/icon-2.png",
+    aircraft: "Boeing 777-90",
+    departure: "12:00",
+    departureCode: "DUB",
+    arrival: "12:50",
+    arrivalCode: "SHJ",
+    duration: "0h 50m",
+    stops: 1,
+    date: "Monday 14 August",
+    price: 240,
+    flightClass: "Economy",
+    flightNumber: "FK234",
+    luggageInfo: "Adult(s): 25KG luggage free" // Now recognized
+  },
+  {
+    id: 3,
+    airline: "Feel Dubai Airline",
+    logo: "/icon-1.png",
+    aircraft: "Boeing 777-90",
+    departure: "12:00",
+    departureCode: "DUB",
+    arrival: "12:50",
+    arrivalCode: "SHJ",
+    duration: "0h 50m",
+    stops: 1,
+    date: "Monday 14 August",
+    price: 240,
+    flightClass: "Economy",
+    flightNumber: "FK234",
+    luggageInfo: "Adult(s): 25KG luggage free" // Now recognized
+  },
+  {
+    id: 4,
+    airline: "Feel Dubai Airline",
+    logo: "/icon-2.png",
+    aircraft: "Boeing 777-90",
+    departure: "12:00",
+    departureCode: "DUB",
+    arrival: "12:50",
+    arrivalCode: "SHJ",
+    duration: "0h 50m",
+    stops: 1,
+    date: "Monday 14 August",
+    price: 240,
+    flightClass: "Economy",
+    flightNumber: "FK234",
+    luggageInfo: "Adult(s): 25KG luggage free" // Now recognized
+  },
+  {
+    id: 5,
+    airline: "Feel Dubai Airline",
+    logo: "/icon-1.png",
+    aircraft: "Boeing 777-90",
+    departure: "12:00",
+    departureCode: "DUB",
+    arrival: "12:50",
+    arrivalCode: "SHJ",
+    duration: "0h 50m",
+    stops: 1,
+    date: "Monday 14 August",
+    price: 240,
+    flightClass: "Economy",
+    flightNumber: "FK234",
+    luggageInfo: "Adult(s): 25KG luggage free" // Now recognized
+  },
+  {
+    id: 6,
+    airline: "Feel Dubai Airline",
+    logo: "/icon-2.png",
+    aircraft: "Boeing 777-90",
+    departure: "12:00",
+    departureCode: "DUB",
+    arrival: "12:50",
+    arrivalCode: "SHJ",
+    duration: "0h 50m",
+    stops: 1,
+    date: "Monday 14 August",
+    price: 240,
+    flightClass: "Economy",
+    flightNumber: "FK234",
+    luggageInfo: "Adult(s): 25KG luggage free" // Now recognized
   },
   // Add more flight data as needed
 ]
@@ -168,7 +260,7 @@ export default function FlightResults() {
             >
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-8">
                 {/* Airline Info */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-start gap-2">
                   <Image
                     src={flight.logo}
                     alt={flight.airline}
@@ -189,15 +281,15 @@ export default function FlightResults() {
                     <div className="text-sm text-gray-600">{flight.departureCode}</div>
                   </div>
 
-                  <div className="flex flex-col items-center min-w-[128px]">
+                  <div className="flex flex-col items-center min-w-[128px] gap-2">
                     <div className="text-sm text-gray-500">{flight.duration}</div>
                     <div className="relative w-32">
-                      <div className="border-t border-gray-300 w-full absolute top-1/2"></div>
+                      <div className="border border-dashed border-indigo-300 w-full absolute top-1/2"></div>
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <Plane className="w-4 h-4 text-blue-600" />
+                        <Plane size={16} fill="blue" className=" text-blue-600 rotate-45" />
                       </div>
                     </div>
-                    <div className="text-xs text-gray-500">{flight.stops} Stop</div>
+                    <div className="text-sm text-gray-500">{flight.stops} Stop</div>
                   </div>
 
                   <div className="text-center">
@@ -205,10 +297,10 @@ export default function FlightResults() {
                     <div className="text-sm text-gray-600">{flight.arrivalCode}</div>
                   </div>
 
-                  <div className="flex items-center justify-between gap-4 w-full lg:w-auto">
-                    <div className="text-left lg:text-right">
-                      <div className="text-2xl font-bold">${flight.price}</div>
+                  <div className="flex flex-col items-center justify-between gap-2 w-full lg:w-auto">
+                    <div className="text-left flex items-center justify-center gap-3 lg:text-right">
                       <div className="text-sm text-gray-500">Price</div>
+                      <div className="text-2xl font-bold">${flight.price}</div>
                     </div>
 
                     <Button className="bg-blue-600 hover:bg-blue-700">
@@ -218,12 +310,8 @@ export default function FlightResults() {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center justify-between">
-                <div className="text-sm text-gray-600">{flight.date}</div>
-                <Button variant="link" className="text-blue-600 p-0">
-                  Flight Detail
-                </Button>
-              </div>
+              <hr className="mt-4" />
+            <FlightDetailsToggle key={flight.id} flight={flight}/>
             </div>
           ))}
         </div>

@@ -9,13 +9,13 @@ function BookingManage() {
       <TabsList className="flex w-full justify-start border-b rounded-none h-auto p-0 bg-transparent space-x-8">
         <TabsTrigger 
           value="manage" 
-          className="relative bg-transparent h-12 rounded-none border-b-2 border-transparent px-0 pb-3 pt-2 font-medium data-[state=active]:border-orange-500 data-[state=active]:text-black hover:text-black"
+          className="relative bg-transparent h-12 rounded-lg px-5 pb-3 pt-2 font-medium   data-[state=active]:text-white hover:text-black"
         >
           Manage Booking
         </TabsTrigger>
         <TabsTrigger 
           value="checkin"
-          className="relative h-12 rounded-none border-b-2 border-transparent px-0 pb-3 pt-2 font-medium data-[state=active]:border-orange-500 data-[state=active]:text-black hover:text-black"
+          className="relative h-12 rounded-lg px-5 pb-3 pt-2 font-medium  data-[state=active]:text-white hover:text-black"
         >
           Check in
         </TabsTrigger>

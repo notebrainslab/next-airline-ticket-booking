@@ -144,11 +144,11 @@ function TripTypeSelection() {
           <div className="flex items-center">
             <Button 
             onClick={()=>{if(count >= 1){setCount(count-1)}}}
-            variant="outline" size="lg" className="h-10 w-10 rounded-l">-</Button>
+            variant="outline" size="lg" className="h-10 w-10 text-blue-400 text-3xl rounded-lg">-</Button>
             <div className="h-8 w-12 flex items-center justify-center border-y">{count}</div>
             <Button 
             onClick={()=>setCount(count+1)}
-            variant="outline" size="lg" className="h-10 w-10 rounded-r">+</Button>
+            variant="outline" size="lg" className="h-10 w-10 text-blue-400 rounded-lg text-3xl">+</Button>
           </div>
         </div>
       </div>
