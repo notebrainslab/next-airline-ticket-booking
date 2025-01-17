@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
-import { CalendarIcon, MapPin, Fuel, Users, Briefcase, Car, Activity } from 'lucide-react'
+import { CalendarIcon, MapPin, Fuel, Users, Briefcase, Car, Activity, Calendar1 } from 'lucide-react'
 import { Calendar } from "@/components/ui/calendar"
 import {
     Popover,
@@ -36,7 +36,7 @@ const travelPackages: TravelPackage[] = [
     {
         id: 1,
         title: "Dubai First Time Visiting",
-        image: "/tour-1.png",
+        image: "/car-1.png",
         rating: 5,
         duration: "3 Days",
         pickupLocation: "Luxury Car Pickup",
@@ -50,7 +50,7 @@ const travelPackages: TravelPackage[] = [
     {
         id: 2,
         title: "Palazzo Versace",
-        image: "/tour-2.png",
+        image: "/car-2.png",
         rating: 5,
         duration: "5 Days",
         pickupLocation: "Luxury Car Pickup",
@@ -64,7 +64,7 @@ const travelPackages: TravelPackage[] = [
     {
         id: 3,
         title: "Palazzo Versace",
-        image: "/tour-3.png",
+        image: "/car-3.png",
         rating: 5,
         duration: "5 Days",
         pickupLocation: "Luxury Car Pickup",
@@ -78,7 +78,7 @@ const travelPackages: TravelPackage[] = [
     {
         id: 4,
         title: "Palazzo Versace",
-        image: "/tour-2.png",
+        image: "/car-4.png",
         rating: 5,
         duration: "5 Days",
         pickupLocation: "Luxury Car Pickup",
@@ -92,7 +92,7 @@ const travelPackages: TravelPackage[] = [
     {
         id: 5,
         title: "Palazzo Versace",
-        image: "/tour-1.png",
+        image: "/car-5.png",
         rating: 5,
         duration: "5 Days",
         pickupLocation: "Luxury Car Pickup",
@@ -106,7 +106,7 @@ const travelPackages: TravelPackage[] = [
     {
         id: 6,
         title: "Palazzo Versace",
-        image: "/tour-3.png",
+        image: "/car-6.png",
         rating: 5,
         duration: "5 Days",
         pickupLocation: "Luxury Car Pickup",
@@ -126,7 +126,7 @@ export default function CarListing() {
 
     return (
         <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-[250px,1fr] gap-6">
+            <div className="grid lg:grid-cols-[300px,1fr] gap-6">
                 {/* Sidebar */}
                 <div className="space-y-6">
                     {/* Search Section */}
@@ -164,7 +164,7 @@ export default function CarListing() {
                                     </PopoverContent>
                                 </Popover>
                             </div>
-                            <Button className="w-full">Search</Button>
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700">Search</Button>
                         </div>
                     </div>
 
@@ -299,11 +299,11 @@ export default function CarListing() {
                 {/* Main Content */}
                 <div className="space-y-6">
                     {travelPackages.map((pkg) => (
-                        <Card className="max-w-4xl" key={pkg.id}>
-                            <CardContent className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-6 p-6">
+                        <Card className="" key={pkg.id}>
+                            <CardContent className="grid grid-cols-1 md:grid-cols-[1.8fr,1.5fr,1fr] gap-4 p-4">
                                 {/* Left Section */}
-                                <div className="space-y-2 bg-gray-300 p-4 rounded-lg">
-                                    <div className="space-y-2">
+                                <div className="space-y-1 bg-gray-300 p-4 rounded-lg">
+                                    <div className="space-y-1 ">
                                         <h3 className="font-semibold text-lg">{pkg.title}</h3>
                                         <p className="text-sm text-muted-foreground">Hyundai Accentor similar</p>
                                     </div>
@@ -312,22 +312,23 @@ export default function CarListing() {
                                         <Image
                                             src={pkg.image}
                                             alt={pkg.title}
+                                            fill
                                             className="object-contain w-full h-full"
                                         />
                                     </div>
 
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex justify-evenly items-center">
                                         <div className="flex items-center gap-2">
-                                            <Users className="w-4 h-4" />
-                                            <span className="text-sm">4</span>
+                                            <Users size={20} />
+                                            <span className="text-2xl font-semibold">4</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <Briefcase className="w-4 h-4" />
-                                            <span className="text-sm">2</span>
+                                            <Briefcase size={20}/>
+                                            <span className="text-2xl font-semibold">2</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <Car className="w-4 h-4" />
-                                            <span className="text-sm">4</span>
+                                            <Car size={20}/>
+                                            <span className="text-2xl font-semibold">4</span>
                                         </div>
                                     </div>
 
@@ -348,8 +349,17 @@ export default function CarListing() {
                                 </div>
 
                                 {/* Middle Section */}
-                                <div className="space-y-6">
-
+                                <div className="space-y-8">
+                                    <div className='flex justify-center items-center gap-1'>
+                                        <Calendar1 size={17}/>
+                                        <div className='flex gap-1'>
+                                            <p className='text-lg font-semibold'>20 AUG</p>
+                                            <span className='text-gray-600'>(Sun)</span>
+                                            <span className='text-lg font-semibold'>-</span>
+                                            <p className='text-lg font-semibold'> 24 OCT</p>
+                                            <span className='text-gray-600'>(Wed)</span>
+                                        </div>
+                                    </div>
                                     <div className="flex items-start gap-3">
                                         <MapPin className="w-5 h-5 mt-0.5" />
                                         <div>
@@ -374,30 +384,31 @@ export default function CarListing() {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-3">
-                                        <Image src="/placeholder.svg?height=24&width=80" alt="Europcar" className="h-6" />
-                                        <Badge variant="secondary" className="bg-blue-100 text-blue-700">
-                                            Very Good <span className="ml-1">9.6</span>
+                                    <div className="flex items-center gap-3 border p-3 rounded-lg">
+                                        <Image src={"/car-brand-1.png"} alt='car-crand' width={70} height={70}/>
+                                        <p>Very Good</p>
+                                        <Badge variant="secondary" className="bg-blue-200 text-blue-700">
+                                            9.6
                                         </Badge>
                                     </div>
                                 </div>
 
                                 {/* Right Section */}
-                                <div className="space-y-8">
-                                    <div className="bg-blue-50 p-3 rounded-md text-sm">
+                                <div className="space-y-14">
+                                    <div className="bg-blue-50 p-2 rounded-md font-semibold text-lg">
                                         Pre-Registration available
                                     </div>
 
-                                    <div>
-                                        <div className="flex items-baseline">
+                                    <div className='space-y-1'>
+                                        <div className="flex items-baseline ">
                                             <span className="text-2xl font-bold">${pkg.pricePerPerson}</span>
                                             <span className="text-sm text-muted-foreground ml-1">/day</span>
                                         </div>
                                         <div className="text-sm text-muted-foreground">Total ${pkg.totalPrice}</div>
                                     </div>
 
-                                    <div className="space-y-2">
-                                        <Button className="w-full" size="lg">
+                                    <div className="space-y-4">
+                                        <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
                                             Select
                                         </Button>
                                         <Button variant="outline" className="w-full" size="lg">

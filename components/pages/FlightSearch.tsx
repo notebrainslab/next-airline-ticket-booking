@@ -8,7 +8,7 @@ import { ArrowLeftRight, Plane } from 'lucide-react'
 
 export default function FlightSearch() {
   return (
-    <div className="max-w-6xl mx-auto lg:px-6 px-3  p-8 mt-7 bg-white rounded-xl shadow-sm ">
+    <div className="max-w-7xl mx-auto lg:px-6  px-3 p-8 mt-7 bg-white rounded-xl shadow-sm ">
       {/* Tabs */}
       <Tabs defaultValue="flight" className="mb-6">
         <TabsList className="w-full flex flex-col lg:flex-row items-center justify-between px-5  bg-gray-100">

@@ -12,7 +12,7 @@ import { Button } from "../ui/button"
 
 export default function CarBooking() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8">
+    <div className="max-w-7xl mx-auto px-6 py-8">
       <div className="grid lg:grid-cols-[1fr,300px] gap-8">
         {/* Left Column - Form */}
         <div className="space-y-8">
@@ -98,7 +98,7 @@ export default function CarBooking() {
               </p>
             </div>
       <div>
-        <Button className="w-full">Next</Button>
+        <Button className="w-full bg-blue-600 hover:bg-blue-700">Next</Button>
       </div>
         </div>
 

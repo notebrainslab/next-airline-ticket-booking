@@ -136,7 +136,7 @@ export default function FlightResults() {
   )
 
   return (
-    <div className="max-w-6xl mx-auto p-4 lg:p-8">
+    <div className="max-w-7xl mx-auto py-6">
       {/* Mobile Filter Button */}
       <div className="lg:hidden mb-4">
         <Sheet>
@@ -145,7 +145,7 @@ export default function FlightResults() {
               <Filter className="mr-2 h-4 w-4" /> Filters
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+          <SheetContent side="left">
             <div className="mt-4">
               <FilterContent />
             </div>
@@ -153,7 +153,7 @@ export default function FlightResults() {
         </Sheet>
       </div>
 
-      <div className="grid lg:grid-cols-[300px,1fr] gap-4 lg:gap-8">
+      <div className="grid lg:grid-cols-[320px,1fr] gap-4 lg:gap-6">
         {/* Desktop Filter Sidebar */}
         <div className="hidden lg:block bg-white p-6 rounded-lg h-fit">
           <FilterContent />

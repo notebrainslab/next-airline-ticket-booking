@@ -39,7 +39,7 @@ const destinations: Destination[] = [
 
 export default function PopularDestinations() {
   return (
-    <div className=" max-w-6xl mx-auto py-12">
+    <div className=" max-w-7xl mx-auto py-12">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold">Popular Global Travel Destinations</h2>
         <Button variant="default" className="bg-blue-600 hover:bg-blue-700">

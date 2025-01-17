@@ -7,7 +7,7 @@ import BookingManage from "./BookingManage";
 
 export default function FlightBookingCard() {
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-gray-200 rounded-xl shadow-sm">
+    <div className="max-w-7xl mx-auto bg-gray-200 rounded-xl shadow-sm">
       {/* Main Service Tabs */}
       <Tabs defaultValue="flights" className="mb-6">
         <TabsList className="grid w-full grid-cols-1 lg:grid-cols-3">

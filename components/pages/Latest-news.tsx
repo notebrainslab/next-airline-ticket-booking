@@ -65,7 +65,7 @@ const blogPosts: BlogPost[] = [
 
 export default function LatestNews() {
   return (
-    <div className="max-w-6xl mx-auto py-12">
+    <div className="max-w-7xl mx-auto py-12">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold">Our Latest News</h2>
         <Button className="bg-blue-600 hover:bg-blue-700">

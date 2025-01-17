@@ -163,7 +163,7 @@ export default function TravelBooking() {
                   </PopoverContent>
                 </Popover>
               </div>
-              <Button className="w-full">Search</Button>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700">Search</Button>
             </div>
           </div>
 
@@ -307,6 +307,7 @@ export default function TravelBooking() {
                   <Image
                     src={pkg.image || "/placeholder.svg"}
                     alt={pkg.title}
+                    fill
                     className="h-[200px] object-cover rounded-lg"
                   />
                 </div>
@@ -369,8 +370,8 @@ export default function TravelBooking() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Button className="w-full">Select</Button>
-                    <Button variant="outline" className="w-full">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700">Select</Button>
+                    <Button variant="outline" className="w-full ">
                       Email Quotes
                     </Button>
                   </div>

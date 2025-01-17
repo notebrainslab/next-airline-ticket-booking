@@ -23,14 +23,14 @@ const achievements: AchievementData[] = [
 
 export default function AchievementCard() {
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto">
       {achievements.map((achievement, index) => (
         <Card key={index} className="overflow-hidden mb-8">
           <CardContent className="p-8 grid md:grid-cols-2 gap-8">
             {/* Left Content */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-blue-600 font-medium mb-2">Achievement</p>
+            <div className="space-y-6 ">
+              <div className="">
+                <p className="text-blue-600 font-medium mb-2 ">Achievement</p>
                 <h2 className="text-3xl font-bold mb-4">{achievement.title}</h2>
                 <p className="text-gray-500 leading-relaxed">{achievement.description}</p>
               </div>

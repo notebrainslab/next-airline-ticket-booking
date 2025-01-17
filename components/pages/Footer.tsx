@@ -63,7 +63,7 @@ const footerData: FooterData = {
 export default function Footer() {
   return (
     <footer>
-      <div className="w-full max-w-6xl mx-auto px-6 py-12">
+      <div className="w-full max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -145,17 +145,17 @@ export default function Footer() {
             <div className="mt-6">
               <h4 className="font-semibold mb-3">Follow Us!</h4>
               <div className="flex gap-3">
-                <Link href={footerData.contactInfo.socialLinks.instagram} className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700">
-                  <Instagram className="w-4 h-4" />
+                <Link href={footerData.contactInfo.socialLinks.instagram} className="bg-blue-600 text-white p-2 rounded-full hover:bg-black">
+                  <Instagram size={20}/>
                 </Link>
-                <Link href={footerData.contactInfo.socialLinks.facebook} className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700">
-                  <Facebook className="w-4 h-4" />
+                <Link href={footerData.contactInfo.socialLinks.facebook} className="bg-blue-600 text-white p-2 rounded-full hover:bg-black">
+                  <Facebook size={20} />
                 </Link>
-                <Link href={footerData.contactInfo.socialLinks.linkedin} className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700">
-                  <Linkedin className="w-4 h-4" />
+                <Link href={footerData.contactInfo.socialLinks.linkedin} className="bg-blue-600 text-white p-2 rounded-full hover:bg-black">
+                  <Linkedin size={20} />
                 </Link>
-                <Link href={footerData.contactInfo.socialLinks.twitter} className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700">
-                  <Twitter className="w-4 h-4" />
+                <Link href={footerData.contactInfo.socialLinks.twitter} className="bg-blue-600 text-white p-2 rounded-full hover:bg-black">
+                  <Twitter size={20} />
                 </Link>
               </div>
             </div>

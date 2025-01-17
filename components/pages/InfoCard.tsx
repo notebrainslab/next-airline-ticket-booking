@@ -24,7 +24,7 @@ const cardData = [
 
 export default function InfoCards() {
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
       {cardData.map((card) => (
         <Card key={card.id} className="border-0 shadow-sm">
           <CardContent className="flex items-start gap-4 p-6">

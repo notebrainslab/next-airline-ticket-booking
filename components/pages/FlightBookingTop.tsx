@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function FlightBookingHeader() {
   return (
     <div className="relative w-full bg-gradient-to-r from-blue-100 to-purple-50 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
           {/* Left Image */}
           <div className="relative w-32 h-32 md:w-48 md:h-48">
