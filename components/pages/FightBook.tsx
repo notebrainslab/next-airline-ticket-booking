@@ -10,7 +10,7 @@ export default function FlightBookingCard() {
     <div className="max-w-7xl p-4 mx-auto bg-gray-200 rounded-xl shadow-sm">
       {/* Main Service Tabs */}
       <Tabs defaultValue="flights" className="mb-6">
-        <TabsList className="grid w-full grid-cols-1 lg:grid-cols-3">
+        <TabsList className="grid w-full grid-cols-1 md:grid-cols-3">
           <TabsTrigger value="flights" className="flex items-center gap-2 transition-all duration-300 ease-in-out">
             <Plane size={20} />
             Flights

@@ -4,9 +4,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs"
 
 function BookingManage() {
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto">
     <Tabs defaultValue="manage" className="w-full">
-      <TabsList className="flex w-full justify-start border-b rounded-none h-auto p-0 bg-transparent space-x-8">
+      <TabsList className="flex w-full justify-start rounded-none h-auto p-0 bg-transparent space-x-8">
         <TabsTrigger 
           value="manage" 
           className="relative bg-transparent h-12 rounded-lg px-5 pb-3 pt-2 font-medium   data-[state=active]:text-white hover:text-black"

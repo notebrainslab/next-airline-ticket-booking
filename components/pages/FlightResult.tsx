@@ -258,9 +258,9 @@ export default function FlightResults() {
               key={flight.id}
               className="bg-white rounded-lg p-4 lg:p-6 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-8">
+              <div className="flex flex-col items-center lg:flex-row lg:items-center md:justify-between justify-center gap-4 lg:gap-8">
                 {/* Airline Info */}
-                <div className="flex flex-col items-start gap-2">
+                <div className="flex flex-col items-center md:items-start gap-2">
                   <Image
                     src={flight.logo}
                     alt={flight.airline}
@@ -275,7 +275,7 @@ export default function FlightResults() {
                 </div>
 
                 {/* Flight Details */}
-                <div className="flex flex-wrap items-center gap-4 lg:gap-8">
+                <div className="flex md:flex-row flex-wrap items-center gap-4 lg:gap-8">
                   <div className="text-center">
                     <div className="text-xl font-bold">{flight.departure}</div>
                     <div className="text-sm text-gray-600">{flight.departureCode}</div>

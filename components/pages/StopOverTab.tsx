@@ -7,9 +7,8 @@ import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { Calendar } from "@/components/ui/calendar"
 import { ArrowLeftRight, CalendarIcon, Plane } from 'lucide-react'
-import Link from 'next/link'
 
-function TripTypeSelection() {
+function StopOverTab() {
     const [date,setDate]=useState<Date>()
     const [dateTwo,setDateTwo]=useState<Date>()
     const [count,setCount]=useState(0)
@@ -123,7 +122,8 @@ function TripTypeSelection() {
       </div>
 
       {/* Stopover Options */}
-      <div className="mb-6">
+      <div className='flex flex-row items-center justify-between mb-6 '>
+      <div className="">
         <h3 className="text-lg text-gray-600 mb-4">When would you like stop in dubai during your journey?</h3>
         <RadioGroup defaultValue="departure" className="flex gap-6 mb-4">
           <div className="flex items-center space-x-2">
@@ -139,14 +139,14 @@ function TripTypeSelection() {
             </label>
           </div>
         </RadioGroup>
-
-        <div className="flex flex-col items-start md:flex-row md:items-center gap-4">
+        </div>
+        <div className="flex flex-col items-start gap-4">
           <p className="text-lg text-gray-600">How many days would you like to stay in Dubai?</p>
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <Button 
             onClick={()=>{if(count >= 1){setCount(count-1)}}}
             variant="outline" size="lg" className="h-10 w-10 text-blue-400 text-3xl rounded-lg">-</Button>
-            <div className="h-8 w-12 flex items-center justify-center border-y">{count}</div>
+            <div className="h-8 w-12 flex items-center justify-center border p-2 rounded-md">{count}</div>
             <Button 
             onClick={()=>setCount(count+1)}
             variant="outline" size="lg" className="h-10 w-10 text-blue-400 rounded-lg text-3xl">+</Button>
@@ -157,14 +157,12 @@ function TripTypeSelection() {
       {/* Action Buttons */}
       <div className="flex justify-center md:justify-end items-center gap-4">
         <Input placeholder="Enter Promo Code" className="max-w-[200px]" />
-        <Link href="/flight/booking">
         <Button className="bg-blue-600 hover:bg-blue-700">
           <Plane className="mr-2 h-4 w-4" /> Show Flight
         </Button>
-        </Link>
       </div>
     </div>
   )
 }
 
-export default TripTypeSelection
+export default StopOverTab

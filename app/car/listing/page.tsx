@@ -2,6 +2,7 @@
 import CarHeader from '@/components/pages/CarHearder'
 import CarListing from '@/components/pages/CarListing'
 import Cards from '@/components/pages/Crad'
+import PaginationDemo from '@/components/pages/PaginationDemo';
 import { CircleCheck, Clock10, DollarSign } from 'lucide-react';
 import React from 'react'
 
@@ -30,6 +31,7 @@ function page() {
     <CarHeader/>
     <Cards cards={cardData}/>
       <CarListing/>
+      <PaginationDemo/>
     </div>
   )
 }
