@@ -1,7 +1,8 @@
-'use client'
+"use client";
+
 import { useState } from "react";
-import { Button } from "../ui/button"
-import FlightBookingForm from "./FlightBookingForm"
+import { Button } from "../ui/button";
+import FlightBookingForm from "./FlightBookingForm";
 
 type FlightDetails = {
   departureTime: string;
@@ -34,27 +35,34 @@ type BookingFormProps = {
   priceSummary: PriceSummary;
 };
 
-export default function BookingForm({ flightDetails, priceSummary }: BookingFormProps) {
-  const [currentStep, setCurrentStep] = useState(2)
-  const [completedSteps, setCompletedSteps] = useState([1])
+export default function BookingForm({
+  flightDetails,
+  priceSummary,
+}: BookingFormProps) {
+  const [currentStep, setCurrentStep] = useState(2);
+  const [completedSteps, setCompletedSteps] = useState([1]);
+
   return (
     <div className="max-w-7xl mx-auto py-8">
       <div className="grid lg:grid-cols-[1fr,300px] gap-8">
         {/* Left Column - Form */}
-        
-        <div className="space-y">
-          <FlightBookingForm/>
+        <div className="space-y-4">
+          <FlightBookingForm />
         </div>
 
         {/* Right Column - Booking Details */}
         <div className="space-y-6">
           {/* Flight Details */}
           <div className="bg-blue-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">Your Booking Detail</h3>
+            <h3 className="text-lg font-semibold mb-4">Your Booking Details</h3>
             <div className="flex items-center justify-between mb-6">
               <div className="text-center">
-                <div className="text-xl font-bold">{flightDetails.departureTime}</div>
-                <div className="text-sm text-gray-600">{flightDetails.departureAirport}</div>
+                <div className="text-xl font-bold">
+                  {flightDetails.departureTime}
+                </div>
+                <div className="text-sm text-gray-600">
+                  {flightDetails.departureAirport}
+                </div>
               </div>
               <div className="flex-1 px-4">
                 <div className="relative">
@@ -68,8 +76,12 @@ export default function BookingForm({ flightDetails, priceSummary }: BookingForm
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold">{flightDetails.arrivalTime}</div>
-                <div className="text-sm text-gray-600">{flightDetails.arrivalAirport}</div>
+                <div className="text-xl font-bold">
+                  {flightDetails.arrivalTime}
+                </div>
+                <div className="text-sm text-gray-600">
+                  {flightDetails.arrivalAirport}
+                </div>
               </div>
             </div>
 
@@ -101,21 +113,21 @@ export default function BookingForm({ flightDetails, priceSummary }: BookingForm
                     <div className="font-medium">{item.description}</div>
                     <div className="text-sm text-gray-500">{item.details}</div>
                   </div>
-                  <div className="font-bold">${item.price}</div>
+                  <div className="font-bold">${item.price.toFixed(2)}</div>
                 </div>
               ))}
               <hr />
               <div className="flex justify-between items-center">
-                <div>
-                  <div className="font-medium text-2xl">Deal/Discount</div>
+                <div className="font-medium text-2xl">Deal/Discount</div>
+                <div className="font-medium text-2xl text-green-600">
+                  -${priceSummary.discount.toFixed(2)}
                 </div>
-                <div className="font-medium text-2xl">${priceSummary.discount}</div>
               </div>
               <div className="flex justify-between items-center">
-                <div>
-                  <div className="font-medium text-2xl">Total</div>
+                <div className="font-medium text-2xl">Total</div>
+                <div className="font-bold text-2xl">
+                  ${priceSummary.total.toFixed(2)}
                 </div>
-                <div className="font-bold text-2xl">${priceSummary.total}</div>
               </div>
             </div>
           </div>

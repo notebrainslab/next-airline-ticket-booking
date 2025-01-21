@@ -2,6 +2,22 @@
   "name": "booking-app",
   "version": "0.1.0",
   "private": true,
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "homepage": "https://github.com/notebrainslab/next-airline-ticket-booking#readme",
+  "bugs": {
+    "url": "https://github.com/notebrainslab/next-airline-ticket-booking/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notebrainslab/next-airline-ticket-booking.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "./index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -11,12 +27,14 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-menubar": "^1.1.4",
     "@radix-ui/react-popover": "^1.1.4",
     "@radix-ui/react-radio-group": "^1.2.2",
     "@radix-ui/react-select": "^2.1.4",
     "@radix-ui/react-slider": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.1",
     "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
