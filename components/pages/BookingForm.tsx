@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "../ui/button";
 import FlightBookingForm from "./FlightBookingForm";
 
 type FlightDetails = {
@@ -39,8 +37,6 @@ export default function BookingForm({
   flightDetails,
   priceSummary,
 }: BookingFormProps) {
-  const [currentStep, setCurrentStep] = useState(2);
-  const [completedSteps, setCompletedSteps] = useState([1]);
 
   return (
     <div className="max-w-7xl mx-auto py-8">
