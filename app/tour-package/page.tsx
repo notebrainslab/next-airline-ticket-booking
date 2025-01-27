@@ -30,6 +30,7 @@ function page() {
     <Cards cards={cardData}/>
       <TravelBooking/>
       <PaginationDemo/>
+      
     </div>
   )
 }
